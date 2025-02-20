@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 
+Dark Base Color: #121212 (Deep Charcoal Black)
+Accent Color 1: #BB86FC (Soft Neon Purple)
+Accent Color 2: #03DAC6 (Vibrant Cyan-Teal)
+*/
+
+body{
+    font-family: "Poppins", sans-serif;
+    background-color: #121212;
+}
+
+/* 
+Primary Text (Main Content & Readability)
+Light Gray: #E0E0E0 → Soft on the eyes, high contrast but not too harsh.
+Off-White: #F5F5F5 → Slightly warmer than pure white, reduces strain.
+Secondary Text (Subtle UI Elements, Less Emphasis)
+Medium Gray: #B0B0B0 → Works well for less important text like captions.
+Muted Cyan: #81D4C8 → A softer version of the teal accent for highlights.
+Highlight Text (When Using Accent Colors for Emphasis)
+Bright Purple: #D0AFFF → A lighter version of #BB86FC, good for interactive elements.
+Soft Teal: #66FFF0 → A less intense version of #03DAC6 for links or buttons.
+Text for High Contrast Needs
+Pure White: #FFFFFF → Best for maximum contrast but can be too sharp on dark backgrounds.
+Almost White: #F8F9FA → Softer alternative to pure white.
+*/
+
+header{
+    height: 10vh;
+    /* background-color: #BB86FC; */
+    background-color: black;
+    color: #F5F5F5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: medium;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
