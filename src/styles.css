@@ -1,44 +1,90 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-/* 
-Dark Base Color: #121212 (Deep Charcoal Black)
-Accent Color 1: #BB86FC (Soft Neon Purple)
-Accent Color 2: #03DAC6 (Vibrant Cyan-Teal)
-*/
-
-body{
-    font-family: "Poppins", sans-serif;
-    background-color: #121212;
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background: #f4f4f4;
 }
 
-/* 
-Primary Text (Main Content & Readability)
-Light Gray: #E0E0E0 → Soft on the eyes, high contrast but not too harsh.
-Off-White: #F5F5F5 → Slightly warmer than pure white, reduces strain.
-Secondary Text (Subtle UI Elements, Less Emphasis)
-Medium Gray: #B0B0B0 → Works well for less important text like captions.
-Muted Cyan: #81D4C8 → A softer version of the teal accent for highlights.
-Highlight Text (When Using Accent Colors for Emphasis)
-Bright Purple: #D0AFFF → A lighter version of #BB86FC, good for interactive elements.
-Soft Teal: #66FFF0 → A less intense version of #03DAC6 for links or buttons.
-Text for High Contrast Needs
-Pure White: #FFFFFF → Best for maximum contrast but can be too sharp on dark backgrounds.
-Almost White: #F8F9FA → Softer alternative to pure white.
-*/
-
-header{
-    height: 10vh;
-    /* background-color: #BB86FC; */
-    background-color: black;
-    color: #F5F5F5;
+header {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-weight: bold;
-    font-size: medium;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    background: #333;
+    color: white;
+    padding: 15px;
+}
+
+#menu-btn {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+.container {
+    display: flex;
+    flex: 1;
+}
+
+aside {
+    width: 250px;
+    background: #222;
+    color: white;
+    padding: 15px;
+    transition: transform 0.3s ease;
+}
+
+ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.todo-input {
+    display: flex;
+    gap: 10px;
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+
+button {
+    padding: 15px 15px;
+    background: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    aside {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100vh;
+        transform: translateX(-100%);
+    }
+
+    #menu-btn {
+        display: block;
+    }
 }
